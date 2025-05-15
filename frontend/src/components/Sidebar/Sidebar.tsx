@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ResizeHandle from "./ResizeHandle";
 import { useSettings } from "../../core/context/settings.context";
 import SidebarHeader from "./SidebarHeader";
+import ChatsContainer from "./ChatsContainer";
 
 const SidebarContainer = styled.div`
   height: 100vh;
@@ -18,6 +19,8 @@ const Sidebar = () => {
   return (
     <SidebarContainer style={{ width: `${settings.sidebarWidth}px` }}>
       <SidebarHeader />
+      <ChatsContainer />
+
       <ResizeHandle />
     </SidebarContainer>
   );

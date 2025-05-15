@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import styled from "styled-components";
 
@@ -12,6 +12,13 @@ const InputContainer = styled.div`
   align-items: center;
   border: 2px solid transparent;
   flex-grow: 1;
+  &.focused {
+    border-color: ${({ theme }) => theme.primary};
+    & svg {
+      color: ${({ theme }) => theme.primary};
+      opacity: 1;
+    }
+  }
   & svg {
     opacity: 0.6;
   }
@@ -28,9 +35,6 @@ const InputContainer = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.textSecondary};
     }
-  }
-  & .active {
-    border-color: ${({ theme }) => theme.primary};
   }
 `;
 
