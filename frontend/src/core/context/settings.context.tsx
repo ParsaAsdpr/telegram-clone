@@ -22,7 +22,7 @@ export const SettingsProvider = ({
   children: React.ReactNode;
 }) => {
   const [settings, setSettings] = useState<Settings>(() => {
-    return storage.getJSON("settings") || defaultSettings;
+    return storage.getJSON("prefrences") || defaultSettings;
   });
 
   const updateSetting = <K extends keyof Settings>(
@@ -31,7 +31,7 @@ export const SettingsProvider = ({
   ) => {
     const updated = { ...settings, [key]: value };
     setSettings(updated);
-    storage.setJSON("settings", updated);
+    storage.setJSON("prefrences", updated);
   };
 
   return (

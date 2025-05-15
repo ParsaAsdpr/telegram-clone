@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IoMenu } from "react-icons/io5";
 import SidebarSearchInput from "./SidebarSearchInput";
+import { useSettings } from "../../core/context/settings.context";
 
 const Header = styled.div`
   display: flex;
@@ -15,9 +16,16 @@ const Header = styled.div`
 `;
 
 const SidebarHeader = () => {
+  const { updateSetting, settings } = useSettings();
   return (
     <Header>
-      <IoMenu size={24} />
+      <IoMenu
+        size={24}
+        cursor="pointer"
+        onClick={() =>
+          updateSetting("theme", settings.theme === "dark" ? "light" : "dark")
+        }
+      />
       <SidebarSearchInput />
     </Header>
   );
