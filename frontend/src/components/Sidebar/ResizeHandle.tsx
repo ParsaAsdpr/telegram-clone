@@ -9,7 +9,7 @@ const Handle = styled.span`
   width: 1px;
   height: 100%;
   cursor: ew-resize;
-  background-color: ${({ theme }) => `${theme.textSecondary}30`};
+  background-color: ${({ theme }) => theme.textSecondary}30;
   z-index: 10;
 `;
 
