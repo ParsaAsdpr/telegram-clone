@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import ChatHeader from "./ChatHeader";
+import MessageInputContainer from "./MessageInputContainer";
+import ChatContainer from "./ChatContainer";
 
 const Container = styled.div`
     background: ${({ theme }) =>
       theme.bodyBackground} url(/assets/images/bg-pattern-${({ theme }) => theme.mode === "dark" ? "dark" : "light"}.png) repeat fixed center;
     background-size: 500px auto;
     flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     &::before{
       content: "";
       position: absolute;
@@ -26,7 +32,10 @@ const Container = styled.div`
 const ChatScreen = () => {
     return (
         <Container>
-            
+            <ChatHeader />
+
+            <ChatContainer />
+            <MessageInputContainer />
         </Container>
     );
 };
