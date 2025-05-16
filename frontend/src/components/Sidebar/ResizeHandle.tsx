@@ -11,6 +11,9 @@ const Handle = styled.span`
   cursor: ew-resize;
   background-color: ${({ theme }) => theme.textSecondary}30;
   z-index: 10;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const ResizeHandle = () => {

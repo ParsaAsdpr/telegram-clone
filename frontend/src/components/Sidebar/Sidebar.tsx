@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ResizeHandle from "./ResizeHandle";
 import { useSettings } from "../../core/context/settings.context";
 import SidebarHeader from "./SidebarHeader";
-import ChatsContainer from "./ChatsContainer";
+import ChatList from "./ChatList";
 
 const SidebarContainer = styled.div`
   height: 100vh;
@@ -11,6 +11,10 @@ const SidebarContainer = styled.div`
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.textPrimary};
   position: relative;
+  @media screen and (max-width: 700px) {
+    min-width: 100vw;
+    max-width: 100vw;
+  }
 `;
 
 const Sidebar = () => {
@@ -19,7 +23,7 @@ const Sidebar = () => {
   return (
     <SidebarContainer style={{ width: `${settings.sidebarWidth}px` }}>
       <SidebarHeader />
-      <ChatsContainer />
+      <ChatList />
 
       <ResizeHandle />
     </SidebarContainer>

@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: 8px;
 `;
 
-const ChatsContainer = () => {
+const ChatList = () => {
   const [activeChat, setActiveChat] = useState<number | null>(null);
   return (
     <Container>
@@ -25,4 +25,4 @@ const ChatsContainer = () => {
   );
 };
 
-export default ChatsContainer;
+export default ChatList;
