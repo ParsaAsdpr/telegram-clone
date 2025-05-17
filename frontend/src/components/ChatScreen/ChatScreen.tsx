@@ -11,6 +11,7 @@ const Container = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     &::before{
       content: "";
       position: absolute;
@@ -36,6 +37,7 @@ const Centered = styled.div`
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     @media screen and (min-width: 1280px) {
         max-width: 700px;
     }
@@ -45,7 +47,6 @@ const ChatScreen = () => {
     return (
         <Container>
             <ChatHeader />
-
             <Centered>
                 <ChatContainer />
                 <MessageInputContainer />

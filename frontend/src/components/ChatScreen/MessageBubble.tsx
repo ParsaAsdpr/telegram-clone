@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Appendix from "../common/Appendix";
+import { BiCheckDouble } from "react-icons/bi";
 
 const MessageGroup = styled.div`
   display: flex;
@@ -34,6 +35,23 @@ const Bubble = styled.div`
       display: block !important;
     }
   }
+  & > p{
+    float: left;
+  }
+  & span {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3px;
+    align-self: flex-end;
+    transform: translateY(20%);
+    float: right;
+    padding-left: 8px;
+    & p {
+      font-size: 12px;
+      color: #ffffffaa;
+    }
+  }
 `;
 
 const MessageBubble = () => {
@@ -41,15 +59,29 @@ const MessageBubble = () => {
     <MessageGroup>
       <Bubble>
         <Appendix />
-        <p>same</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur 
+        </p>
+        <span>
+          <p>12:13</p>
+          <BiCheckDouble size={20} />
+        </span>
       </Bubble>
       <Bubble>
         <Appendix />
         <p>same</p>
+        <span>
+          <p>12:13</p>
+          <BiCheckDouble size={20} />
+        </span>
       </Bubble>
       <Bubble>
         <Appendix />
         <p>same</p>
+        <span>
+          <p>12:13</p>
+          <BiCheckDouble size={20} />
+        </span>
       </Bubble>
     </MessageGroup>
   );

@@ -8,9 +8,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 4px 0 #00000020;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: calc(100% - 40px);
   z-index: 10;
   padding: 8px 20px;
