@@ -13,7 +13,6 @@ class Storage {
 
   getJSON(key: string): any {
     const json = JSON.parse(localStorage.getItem(key) || "{}");
-    console.log(localStorage.getItem(key));
     if (Object.keys(json).length === 0) return null;
     return json;
   }

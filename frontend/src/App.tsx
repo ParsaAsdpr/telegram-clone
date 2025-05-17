@@ -16,8 +16,6 @@ const Container = styled.div`
 function App() {
   const { settings } = useSettings();
 
-  // const toggleTheme = () => setIsDarkMode((prev) => !prev);
-
   return (
     <ThemeProvider theme={settings.theme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
