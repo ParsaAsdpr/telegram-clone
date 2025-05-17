@@ -21,6 +21,7 @@ const Container = styled.div`
       background: url(/assets/images/bg-gradient.png) no-repeat fixed center;
       background-size: cover;
       opacity: 0.6;
+      z-index: 1;
       display: ${({ theme }) => (theme.mode === "light" ? "block" : "none")};
     }
     @media screen and (max-width: 700px) {
@@ -29,13 +30,26 @@ const Container = styled.div`
     }
 `
 
+const Centered = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1280px) {
+        max-width: 700px;
+    }
+`
+
 const ChatScreen = () => {
     return (
         <Container>
             <ChatHeader />
 
-            <ChatContainer />
-            <MessageInputContainer />
+            <Centered>
+                <ChatContainer />
+                <MessageInputContainer />
+            </Centered>
         </Container>
     );
 };

@@ -3,9 +3,16 @@ import MessageInput from "./MessageInput";
 import Appendix from "../common/Appendix";
 
 const Container = styled.div`
-  padding: 10px 50px 20px 50px;
+  padding: 10px 20px 20px 20px;
   display: flex;
   gap: 4px;
+  z-index: 2;
+  @media screen and (max-width: 700px) {
+    padding: 10px 15px 12px 15px;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 6px 8px;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -28,6 +35,10 @@ const Button = styled.div`
   height: 55px;
   border-radius: 100px;
   background-color: ${({ theme }) => theme.background};
+  @media screen and (max-width: 450px) {
+    width: 45px;
+    height: 45px;
+  }
 `;
 
 const MessageInputContainer = () => {

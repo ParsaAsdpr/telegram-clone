@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ActionButtons from "./ActionButtons";
+import BackButton from "../common/BackButton";
 
 const Container = styled.div`
   background: ${({ theme }) => theme.background};
@@ -13,6 +14,14 @@ const Container = styled.div`
   width: calc(100% - 40px);
   z-index: 10;
   padding: 8px 20px;
+  @media screen and (max-width: 700px) {
+    padding: 8px 13px;
+    width: calc(100% - 26px);
+  }
+  @media screen and (max-width: 450px) {
+    padding: 7px;
+    width: calc(100% - 14px);
+  }
 `;
 
 const Profile = styled.div`
@@ -39,14 +48,21 @@ const Profile = styled.div`
   }
 `;
 
+const StyledBackButton = styled(BackButton)`
+  @media screen and (min-width: 700px) {
+    display: none !important;
+  }
+`;
+
 const ChatHeader = () => {
   return (
     <Container>
       <Profile>
+        <StyledBackButton />
         <img src="https://i.pravatar.cc/300" alt="user avatar" />
         <div>
-          <h2>SGShop Group</h2>
-          <span>225 members, 98 online</span>
+          <h2>Parsa</h2>
+          <span>Online</span>
         </div>
       </Profile>
 

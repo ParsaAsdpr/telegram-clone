@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   flex-grow: 1;
   overflow-y: auto;
+  z-index: 2;
 `;
 
 const ChatContainer = () => {
