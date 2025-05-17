@@ -11,6 +11,7 @@ const MessageGroup = styled.div`
 
 const Bubble = styled.div`
   background-color: ${({ theme }) => theme.primary};
+  color: #ffffff;
   min-width: 100px;
   max-width: 80%;
   border-radius: 20px;

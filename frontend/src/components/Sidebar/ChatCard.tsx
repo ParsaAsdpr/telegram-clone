@@ -21,9 +21,9 @@ const Card = styled(RippleCard)`
     background-color: ${({ theme }) => theme.primary};
   }
   &.active p,
-  &.active span {
-    color: ${({ theme }) =>
-      theme.mode === "dark" ? "#ffffff" : "#000000"} !important;
+  &.active span,
+  &.active h3 {
+    color: #fff !important;
   }
   & img {
     border-radius: 1000px;
@@ -52,7 +52,7 @@ const Card = styled(RippleCard)`
       justify-content: space-between;
       align-items: center;
       gap: 5px;
-     & h3 {
+      & h3 {
         color: ${({ theme }) =>
           theme.mode === "dark" ? "#ffffff" : "#111111"};
         font-size: 16px;
