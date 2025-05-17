@@ -5,9 +5,10 @@ const Input = styled.input`
   outline: none;
   background-color: transparent;
   color: ${({ theme }) => (theme.mode === "dark" ? "#ffffff" : "#000000")};
-  font-size: 17px;
+  font-size: 16px;
   height: 100%;
-  font-weight: 540;
+  font-family: "Roboto";
+  font-weight: 410;
   flex-grow: 1;
   &::placeholder {
     color: ${({ theme }) => theme.textSecondary};
