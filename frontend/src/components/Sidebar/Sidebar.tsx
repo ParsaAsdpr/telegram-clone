@@ -5,7 +5,7 @@ import SidebarHeader from "./SidebarHeader";
 import ChatList from "./ChatList";
 
 const SidebarContainer = styled.div`
-  height: 100vh;
+  height: 100dvh;
   min-width: 250px;
   max-width: 480px;
   background-color: ${({ theme }) => theme.background};

@@ -17,10 +17,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 100dvh;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    user-select: none;
   }
 `;
 

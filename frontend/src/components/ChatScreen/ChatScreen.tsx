@@ -11,7 +11,7 @@ const Container = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
     &::before{
       content: "";
       position: absolute;
@@ -27,7 +27,7 @@ const Container = styled.div`
     }
     @media screen and (max-width: 700px) {
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
     }
 `
 
